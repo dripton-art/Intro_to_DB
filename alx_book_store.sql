@@ -37,7 +37,8 @@ CREATE TABLE Orders (
 --create Order_Details
 CREATE TABLE Order_Details (
     orderdetailid PRIMARY KEY,
-    FOREIGN KEY(order_id) REFERENCES Orders(order_id),
-    FOREIGN KEY(book_id) REFERENCES Books(book_id),
+    order_id INT
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id),
     quantity DOUBLE
 );
