@@ -5,23 +5,23 @@ USE alx_book_store;
 
 --create books schema
 CREATE TABLE Books (
-    book_id PRIMARY KEY,
+    book_id INT PRIMARY KEY,
     title VARCHAR(130),
     author_id INT,
-    FOREIGN KEY(author_id) REFERENCES Authors(author_id),
+    FOREIGN KEY (author_id) REFERENCES Authors(author_id),
     price DOUBLE,
     publication_date DATE
 );
 
 --create Authors table schema
 CREATE TABLE Authors (
-    author_id PRIMARY KEY,
+    author_id INT PRIMARY KEY,
     author_name VARCHAR(215)
 );
 
 --create Customers table schema
 CREATE TABLE Customers (
-    customer_id PRIMARY KEY,
+    customer_id INT PRIMARY KEY,
     customer_name VARCHAR(215),
     email VARCHAR(215),
     address TEXT
@@ -37,7 +37,7 @@ CREATE TABLE Orders (
 
 --create Order_Details
 CREATE TABLE Order_Details (
-    orderdetailid PRIMARY KEY,
+    orderdetailid INT PRIMARY KEY,
     order_id INT,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     book_id INT,
