@@ -3,6 +3,12 @@
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 USE alx_book_store;
 
+--create Authors table schema
+CREATE TABLE Authors (
+    author_id INT PRIMARY KEY,
+    author_name VARCHAR(215)
+);
+
 --create books schema
 CREATE TABLE Books (
     book_id INT PRIMARY KEY,
@@ -11,12 +17,6 @@ CREATE TABLE Books (
     FOREIGN KEY (author_id) REFERENCES Authors(author_id),
     price DOUBLE,
     publication_date DATE
-);
-
---create Authors table schema
-CREATE TABLE Authors (
-    author_id INT PRIMARY KEY,
-    author_name VARCHAR(215)
 );
 
 --create Customers table schema
